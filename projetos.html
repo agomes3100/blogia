@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos - Blog de Inteligência Artificial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilos Gerais */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #2a2a72;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 10px 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+
+        .menu-link:hover {
+            color: #00BFFF;
+            transition: 0.3s;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        h1, h2 {
+            color: #2a2a72;
+            text-align: center;
+        }
+
+        /* Estilos dos Projetos */
+        .projetos-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .projeto-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .projeto-card:hover {
+            transform: scale(1.05);
+        }
+
+        .projeto-img {
+            width: 100%;
+            height: 180px;
+            border-radius: 8px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .projeto-title {
+            font-size: 1.5em;
+            color: #2a2a72;
+            margin-bottom: 10px;
+        }
+
+        .projeto-description {
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .btn-ver-projeto {
+            background-color: #2a2a72;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            transition: background-color 0.3s;
+        }
+
+        .btn-ver-projeto:hover {
+            background-color: #00BFFF;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            .projeto-card {
+                width: 48%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .projeto-card {
+                width: 100%;
+            }
+
+            .projeto-img {
+                height: 150px;
+            }
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #2a2a72;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #00BFFF;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="menu-link">Home</a></li>
+                <li><a href="artigos.html" class="menu-link">Artigos</a></li>
+                <li><a href="projetos.html" class="menu-link">Projetos</a></li>
+                <li><a href="recursos.html" class="menu-link">Recursos</a></li>
+                <li><a href="sobre.html" class="menu-link">Sobre</a></li>
+                <li><a href="contato.html" class="menu-link">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção de Projetos -->
+    <section id="projetos">
+        <div class="container">
+            <h1>Projetos em Inteligência Artificial</h1>
+            <p>Conheça alguns projetos interessantes desenvolvidos com IA, que demonstram seu potencial e aplicações práticas.</p>
+
+            <div class="projetos-grid">
+                <!-- Projeto 1 -->
+                <div class="projeto-card">
+                    <img src="https://via.placeholder.com/400x250" alt="Imagem do projeto 1" class="projeto-img">
+                    <h3 class="projeto-title">Detector de Anomalias</h3>
+                    <p class="projeto-description">Um sistema que utiliza IA para detectar anomalias em dados de sensores, aplicável em manutenção preditiva.</p>
+                    <button class="btn-ver-projeto">Ver Projeto</button>
+                </div>
+
+                <!-- Projeto 2 -->
+                <div class="projeto-card">
+                    <img src="https://via.placeholder.com/400x250" alt="Imagem do projeto 2" class="projeto-img">
+                    <h3 class="projeto-title">Reconhecimento de Imagens</h3>
+                    <p class="projeto-description">Uma aplicação de visão computacional que classifica e reconhece objetos em imagens com alta precisão.</p>
+                    <button class="btn-ver-projeto">Ver Projeto</button>
+                </div>
+
+                <!-- Projeto 3 -->
+                <div class="projeto-card">
+                    <img src="https://via.placeholder.com/400x250" alt="Imagem do projeto 3" class="projeto-img">
+                    <h3 class="projeto-title">Assistente Virtual</h3>
+                    <p class="projeto-description">Um chatbot inteligente que utiliza processamento de linguagem natural para interagir com usuários e responder perguntas.</p>
+                    <button class="btn-ver-projeto">Ver Projeto</button>
+                </div>
+
+                <!-- Projeto 4 -->
+                <div class="projeto-card">
+                    <img src="https://via.placeholder.com/400x250" alt="Imagem do projeto 4" class="projeto-img">
+                    <h3 class="projeto-title">Sistema de Recomendação</h3>
+                    <p class="projeto-description">Um sistema que analisa o comportamento do usuário para sugerir produtos ou conteúdos personalizados.</p>
+                    <button class="btn-ver-projeto">Ver Projeto</button>
+                </div>
+
+                <!-- Projeto 5 -->
+                <div class="projeto-card">
+                    <img src="https://via.placeholder.com/400x250" alt="Imagem do projeto 5" class="projeto-img">
+                    <h3 class="projeto-title">Análise de Sentimentos</h3>
+                    <p class="projeto-description">Uma ferramenta que analisa textos para determinar a polaridade emocional, útil em marketing e feedback de clientes.</p>
+                    <button class="btn-ver-projeto">Ver Projeto</button>
+                </div>
+
+                <!-- Projeto 6 -->
+                <div class="projeto-card">
+                    <img src="https://via.placeholder.com/400x250" alt="Imagem do projeto 6" class="projeto-img">
+                    <h3 class="projeto-title">Previsão de Vendas</h3>
+                    <p class="projeto-description">Um modelo que utiliza algoritmos de aprendizado de máquina para prever vendas futuras com base em dados históricos.</p>
+                    <button class="btn-ver-projeto">Ver Projeto</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Blog de IA. Todos os direitos reservados. | <a href="#home">Voltar ao Topo</a></p>
+    </footer>
+
+</body>
+
+</html>

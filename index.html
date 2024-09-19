@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Inteligência Artificial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilos Gerais */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #2a2a72;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 10px 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+
+        .menu-link:hover {
+            color: #00BFFF;
+            transition: 0.3s;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        h1,
+        h2 {
+            color: #2a2a72;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        /* Animação */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Estilos da Introdução */
+        #intro {
+            background: linear-gradient(135deg, #2a2a72, #009FFD);
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 2.5em;
+        }
+
+        .intro-text {
+            font-size: 1.3em;
+            margin-top: 15px;
+        }
+
+        /* Estilos dos Fundamentos */
+        #fundamentos {
+            padding: 50px 0;
+        }
+
+        .fundamentos-grid {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+
+        .fundamento-item {
+            margin: 20px;
+            flex: 1 1 30%;
+        }
+
+        .fundamento-item i {
+            font-size: 4em;
+            color: #2a2a72;
+        }
+
+        .fundamento-item h3 {
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #2a2a72;
+        }
+
+        .fundamento-item p {
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        /* Tabs em Machine Learning */
+        #machine-learning {
+            padding: 50px 0;
+            background-color: #f4f4f9;
+        }
+
+        .tabs {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .tab-button {
+            background-color: #2a2a72;
+            color: white;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .tab-button:hover {
+            background-color: #00BFFF;
+        }
+
+        .tab-content {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #2a2a72;
+            margin: 10px 0;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Casos de Uso */
+        #casos-uso {
+            padding: 50px 0;
+        }
+
+        .uso-grid {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+
+        .uso-card {
+            perspective: 1000px;
+            width: 250px;
+            margin: 20px;
+        }
+
+        .uso-card div {
+            width: 100%;
+            padding: 20px;
+            color: white;
+            background-color: #2a2a72;
+            transition: transform 0.5s;
+            transform-style: preserve-3d;
+            position: relative;
+            height: 150px;
+        }
+
+        .uso-card .card-front,
+        .uso-card .card-back {
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .uso-card .card-back {
+            transform: rotateY(180deg);
+            background-color: #009FFD;
+        }
+
+        .uso-card:hover div {
+            transform: rotateY(180deg);
+        }
+
+        /* Seção de História da IA */
+        #historia {
+            padding: 50px 0;
+            background-color: #f4f4f9;
+            text-align: center;
+        }
+
+        .historia-content {
+            text-align: left;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #2a2a72;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #00BFFF;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            .fundamento-item, .uso-card {
+                flex: 1 1 100%;
+                margin-bottom: 20px;
+            }
+
+            .title {
+                font-size: 2em;
+            }
+
+            .intro-text {
+                font-size: 1.1em;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul li a {
+                font-size: 1em;
+            }
+
+            .tab-button {
+                font-size: 0.9em;
+                padding: 8px 16px;
+            }
+
+            .tab-content {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="menu-link">Home</a></li>
+                <li><a href="artigos.html" class="menu-link">Artigos</a></li>
+                <li><a href="projetos.html" class="menu-link">Projetos</a></li>
+                <li><a href="recursos.html" class="menu-link">Recursos</a></li>
+                <li><a href="sobre.html" class="menu-link">Sobre</a></li>
+                <li><a href="contato.html" class="menu-link">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Introdução -->
+    <section id="intro">
+        <div class="container">
+            <h1 class="title">Inteligência Artificial: Guia Completo para Iniciantes</h1>
+            <p class="intro-text">Explore o mundo da IA, desde seus fundamentos até suas aplicações mais avançadas. Um blog para aprender e compartilhar conhecimento!</p>
+        </div>
+    </section>
+
+    <!-- Fundamentos da IA -->
+    <section id="fundamentos" class="fade-in">
+        <div class="container">
+            <h2>Fundamentos da Inteligência Artificial</h2>
+            <div class="fundamentos-grid">
+                <div class="fundamento-item">
+                    <i class="fas fa-robot"></i>
+                    <h3>Machine Learning</h3>
+                    <p>Aprendizado automático é o motor da IA moderna...</p>
+                </div>
+                <div class="fundamento-item">
+                    <i class="fas fa-brain"></i>
+                    <h3>Deep Learning</h3>
+                    <p>Redes neurais profundas que permitem o reconhecimento...</p>
+                </div>
+                <div class="fundamento-item">
+                    <i class="fas fa-language"></i>
+                    <h3>Processamento de Linguagem Natural</h3>
+                    <p>Capacidade das máquinas de entender e gerar texto...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Machine Learning -->
+    <section id="machine-learning">
+        <div class="container">
+            <h2>Aprendizado de Máquina</h2>
+            <div class="tabs">
+                <button class="tab-button" onclick="showTab('supervisionado')">Supervisionado</button>
+                <button class="tab-button" onclick="showTab('nao-supervisionado')">Não Supervisionado</button>
+                <button class="tab-button" onclick="showTab('reforco')">Reforço</button>
+            </div>
+            <div class="tab-content active" id="supervisionado">Aqui você aprenderá sobre o aprendizado supervisionado...</div>
+            <div class="tab-content" id="nao-supervisionado">Algoritmos que encontram padrões sem rótulos nos dados...</div>
+            <div class="tab-content" id="reforco">O aprendizado por reforço usa recompensas e punições para treinar modelos...</div>
+        </div>
+    </section>
+
+    <!-- Casos de Uso -->
+    <section id="casos-uso">
+        <div class="container">
+            <h2>Casos de Uso de Inteligência Artificial</h2>
+            <div class="uso-grid">
+                <div class="uso-card">
+                    <div class="card-front">
+                        <h3>Chatbots</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Chatbots usam IA para interagir de forma automatizada com os usuários...</p>
+                    </div>
+                </div>
+                <div class="uso-card">
+                    <div class="card-front">
+                        <h3>Visão Computacional</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>A IA permite que máquinas interpretem imagens e vídeos...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- História da IA -->
+    <section id="historia">
+        <div class="container">
+            <h2>História da Inteligência Artificial</h2>
+            <div class="historia-content">
+                <p>A história da IA começou nas décadas de 1950 e 1960, com grandes avanços em matemática e algoritmos. Alan Turing, um dos pioneiros da computação, propôs o conceito de uma máquina capaz de pensar. Desde então, a IA evoluiu significativamente, alcançando o estágio atual de aprendizado profundo, onde redes neurais simulam processos complexos do cérebro humano.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Blog de IA. Todos os direitos reservados. | <a href="#home">Voltar ao Topo</a></p>
+    </footer>
+
+    <!-- JavaScript para Tabs -->
+    <script>
+        function showTab(tab) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+            document.getElementById(tab).classList.add('active');
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos - Blog de Inteligência Artificial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilos Gerais */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #2a2a72;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 10px 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+
+        .menu-link:hover {
+            color: #00BFFF;
+            transition: 0.3s;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        h1, h2 {
+            color: #2a2a72;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        /* Estilos dos Recursos */
+        .recursos-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .recurso-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            margin-bottom: 30px;
+            padding: 20px;
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .recurso-card:hover {
+            transform: scale(1.05);
+        }
+
+        .recurso-card i {
+            font-size: 3em;
+            color: #2a2a72;
+            margin-bottom: 15px;
+        }
+
+        .recurso-title {
+            font-size: 1.5em;
+            color: #2a2a72;
+            margin-bottom: 10px;
+        }
+
+        .recurso-description {
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .btn-acessar-recurso {
+            background-color: #2a2a72;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            transition: background-color 0.3s;
+        }
+
+        .btn-acessar-recurso:hover {
+            background-color: #00BFFF;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            .recurso-card {
+                width: 48%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .recurso-card {
+                width: 100%;
+            }
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #2a2a72;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #00BFFF;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="menu-link">Home</a></li>
+                <li><a href="artigos.html" class="menu-link">Artigos</a></li>
+                <li><a href="projetos.html" class="menu-link">Projetos</a></li>
+                <li><a href="recursos.html" class="menu-link">Recursos</a></li>
+                <li><a href="sobre.html" class="menu-link">Sobre</a></li>
+                <li><a href="contato.html" class="menu-link">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção de Recursos -->
+    <section id="recursos">
+        <div class="container">
+            <h1>Recursos para Estudo de Inteligência Artificial</h1>
+            <p>Explore ferramentas, livros, cursos e outros recursos que irão ajudar no seu aprendizado sobre IA.</p>
+
+            <div class="recursos-grid">
+                <!-- Recurso 1 -->
+                <div class="recurso-card">
+                    <i class="fas fa-book"></i>
+                    <h3 class="recurso-title">Livros Recomendados</h3>
+                    <p class="recurso-description">Uma seleção de livros que cobrem desde os fundamentos da IA até tópicos avançados.</p>
+                    <button class="btn-acessar-recurso">Acessar</button>
+                </div>
+
+                <!-- Recurso 2 -->
+                <div class="recurso-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3 class="recurso-title">Cursos Online</h3>
+                    <p class="recurso-description">Cursos gratuitos e pagos que ensinam IA, Machine Learning, e Deep Learning.</p>
+                    <button class="btn-acessar-recurso">Acessar</button>
+                </div>
+
+                <!-- Recurso 3 -->
+                <div class="recurso-card">
+                    <i class="fas fa-tools"></i>
+                    <h3 class="recurso-title">Ferramentas e Bibliotecas</h3>
+                    <p class="recurso-description">Principais bibliotecas e ferramentas para desenvolvimento de modelos de IA.</p>
+                    <button class="btn-acessar-recurso">Acessar</button>
+                </div>
+
+                <!-- Recurso 4 -->
+                <div class="recurso-card">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3 class="recurso-title">Tutoriais e Workshops</h3>
+                    <p class="recurso-description">Tutoriais passo a passo e workshops práticos para melhorar suas habilidades.</p>
+                    <button class="btn-acessar-recurso">Acessar</button>
+                </div>
+
+                <!-- Recurso 5 -->
+                <div class="recurso-card">
+                    <i class="fas fa-user-friends"></i>
+                    <h3 class="recurso-title">Comunidades e Fóruns</h3>
+                    <p class="recurso-description">Junte-se a comunidades e fóruns para discutir e compartilhar conhecimento sobre IA.</p>
+                    <button class="btn-acessar-recurso">Acessar</button>
+                </div>
+
+                <!-- Recurso 6 -->
+                <div class="recurso-card">
+                    <i class="fas fa-newspaper"></i>
+                    <h3 class="recurso-title">Notícias e Artigos</h3>
+                    <p class="recurso-description">Fique por dentro das últimas tendências e inovações no campo da IA.</p>
+                    <button class="btn-acessar-recurso">Acessar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Blog de IA. Todos os direitos reservados. | <a href="#home">Voltar ao Topo</a></p>
+    </footer>
+
+</body>
+
+</html>

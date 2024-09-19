@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artigos - Blog de Inteligência Artificial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilos Gerais */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #2a2a72;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 10px 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+
+        .menu-link:hover {
+            color: #00BFFF;
+            transition: 0.3s;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        h1, h2 {
+            color: #2a2a72;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        /* Estilos dos Artigos */
+        .artigos-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .artigo-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+        }
+
+        .artigo-card:hover {
+            transform: scale(1.05);
+        }
+
+        .artigo-img {
+            width: 100%;
+            height: 180px;
+            border-radius: 8px 8px 0 0;
+            object-fit: cover;
+        }
+
+        .artigo-content {
+            padding: 20px;
+        }
+
+        .artigo-title {
+            font-size: 1.5em;
+            color: #2a2a72;
+            margin-bottom: 10px;
+        }
+
+        .artigo-resumo {
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .btn-leia-mais {
+            background-color: #2a2a72;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            transition: background-color 0.3s;
+        }
+
+        .btn-leia-mais:hover {
+            background-color: #00BFFF;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            .artigo-card {
+                width: 48%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .artigo-card {
+                width: 100%;
+            }
+
+            .artigo-img {
+                height: 150px;
+            }
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #2a2a72;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #00BFFF;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="menu-link">Home</a></li>
+                <li><a href="artigos.html" class="menu-link">Artigos</a></li>
+                <li><a href="projetos.html" class="menu-link">Projetos</a></li>
+                <li><a href="recursos.html" class="menu-link">Recursos</a></li>
+                <li><a href="sobre.html" class="menu-link">Sobre</a></li>
+                <li><a href="contato.html" class="menu-link">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção de Artigos -->
+    <section id="artigos">
+        <div class="container">
+            <h1>Artigos sobre Inteligência Artificial</h1>
+            <p>Aprofunde seus conhecimentos com nossos artigos especializados em IA, Aprendizado de Máquina, e mais.</p>
+
+            <div class="artigos-grid">
+                <!-- Artigo 1 -->
+                <div class="artigo-card">
+                    <img src="https://via.placeholder.com/400x250" alt="Imagem do artigo 1" class="artigo-img">
+                    <div class="artigo-content">
+                        <h3 class="artigo-title">Introdução ao Machine Learning</h3>
+                        <p class="artigo-resumo">Descubra os princípios básicos do Machine Learning e como ele está revolucionando o mundo.</p>
+                        <button class="btn-leia-mais">Leia Mais</button>
+                    </div>
+                </div>
+
+                <!-- Artigo 2 -->
+                <div class="artigo-card">
+                    <img src="https://via.placeholder.com/400x250" alt="Imagem do artigo 2" class="artigo-img">
+                    <div class="artigo-content">
+                        <h3 class="artigo-title">Redes Neurais Explicadas</h3>
+                        <p class="artigo-resumo">Entenda como as redes neurais funcionam e sua importância no desenvolvimento de IA.</p>
+                        <button class="btn-leia-mais">Leia Mais</button>
+                    </div>
+                </div>
+
+                <!-- Artigo 3 -->
+                <div class="artigo-card">
+                    <img src="https://via.placeholder.com/400x250" alt="Imagem do artigo 3" class="artigo-img">
+                    <div class="artigo-content">
+                        <h3 class="artigo-title">IA e Processamento de Linguagem Natural</h3>
+                        <p class="artigo-resumo">Explore como a IA está mudando o processamento e a compreensão da linguagem humana.</p>
+                        <button class="btn-leia-mais">Leia Mais</button>
+                    </div>
+                </div>
+
+                <!-- Artigo 4 -->
+                <div class="artigo-card">
+                    <img src="https://via.placeholder.com/400x250" alt="Imagem do artigo 4" class="artigo-img">
+                    <div class="artigo-content">
+                        <h3 class="artigo-title">Aplicações de IA na Saúde</h3>
+                        <p class="artigo-resumo">Veja como a Inteligência Artificial está ajudando a salvar vidas no setor de saúde.</p>
+                        <button class="btn-leia-mais">Leia Mais</button>
+                    </div>
+                </div>
+
+                <!-- Artigo 5 -->
+                <div class="artigo-card">
+                    <img src="https://via.placeholder.com/400x250" alt="Imagem do artigo 5" class="artigo-img">
+                    <div class="artigo-content">
+                        <h3 class="artigo-title">Ética na Inteligência Artificial</h3>
+                        <p class="artigo-resumo">Aprofunde-se nos desafios éticos que surgem com o avanço da IA em diversos setores.</p>
+                        <button class="btn-leia-mais">Leia Mais</button>
+                    </div>
+                </div>
+
+                <!-- Artigo 6 -->
+                <div class="artigo-card">
+                    <img src="https://via.placeholder.com/400x250" alt="Imagem do artigo 6" class="artigo-img">
+                    <div class="artigo-content">
+                        <h3 class="artigo-title">Automatização e IA no Futuro</h3>
+                        <p class="artigo-resumo">Descubra como a automatização movida por IA irá impactar as indústrias no futuro próximo.</p>
+                        <button class="btn-leia-mais">Leia Mais</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Blog de IA. Todos os direitos reservados. | <a href="#home">Voltar ao Topo</a></p>
+    </footer>
+
+</body>
+
+</html>
